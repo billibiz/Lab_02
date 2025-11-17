@@ -206,7 +206,22 @@ http://localhost/api/teams
 ```
 <img width="692" height="140" alt="image" src="https://github.com/user-attachments/assets/54b25a1e-a748-422d-9f83-91a19fc74c37" />
 
-#### Тест 4: Верификация работы кеширования
+
+#### Тест 4: Обновление спортивной команды по идентификатору
+```
+curl -X PUT -H "Content-Type: application/json" \
+-d '{"team_name": "Спартак-М", "sport_type": "Футбол"}' \
+http://localhost/api/teams/1
+```
+<img width="1087" height="213" alt="image" src="https://github.com/user-attachments/assets/c3f24808-10cd-4600-984d-a882162f9b00" />
+
+#### Тест 5: Удаление спортивной команды по идентификатору
+```
+curl -X DELETE http://localhost/api/teams/2
+```
+<img width="1124" height="171" alt="image" src="https://github.com/user-attachments/assets/24a23c0a-e95a-46b3-bd7e-458ac0059d16" />
+
+#### Тест 6: Верификация работы кеширования
 ```
 curl -v http://localhost/api/teams
 ```
